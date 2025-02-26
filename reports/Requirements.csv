@@ -1,0 +1,3 @@
+ReqID,ReqName,ReqDescription,System
+MR1,Nominal Temperature Range Requirement,The system shall operate in an environment with a maximum temperature range of 40-70 deg F.,Lego_Rover
+MR2,Minimum Battery Life,The system shall have a battery life of at least 20 minutes under all nominal temperature range.,Lego_Rover

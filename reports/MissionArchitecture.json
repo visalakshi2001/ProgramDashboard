@@ -1,0 +1,18 @@
+{ "head": {
+    "vars": [ "Mission" , "Env" , "MissionEntities" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Mission": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#Lego_Rover_Mission" } ,
+        "Env": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#Lego_Rover_Mission_Environment" } ,
+        "MissionEntities": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#Lego_Rover" }
+      } ,
+      { 
+        "Mission": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#Lego_Rover_Mission" } ,
+        "Env": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#Lego_Rover_Mission_Environment" } ,
+        "MissionEntities": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#operator" }
+      }
+    ]
+  }
+}
