@@ -1,4 +1,4 @@
-TestFacility,Role,TestFacilityTemp,TestFacilityTempValue,TestFacilityTempUnit,Equipment
+Test Facility,Role,Test Facility Temp,Test Facility Temp Value,Test Facility Temp Unit,Equipment
 UA_TestFacility,UA_Researcher,UA_TestFacility_ActualTemp,70,degF,UA_MemoryStick
 UA_TestFacility,UA_Researcher,UA_TestFacility_ActualTemp,70,degF,UA_Thermometer
 UA_TestFacility,UA_Researcher,UA_TestFacility_ActualTemp,70,degF,UA_Stopwatch

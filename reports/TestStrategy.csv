@@ -1,4 +1,4 @@
-TestStrategy,Test,TestCase,TestSubject,TestProcedure,Researcher,ResearcherOrg,Facility,Org,DurationValue,DurationUnit,OccursBefore,TestEquipment
+Test Strategy,Test,Test Case,Test Subject,Test Procedure,Researcher,Researcher Organization,Facility,Organization,Duration Value,Duration Unit,Occurs Before,Test Equipment
 Rover_TestStrategy,T1,T1_1,Lego_Rover,TP1,UA_Researcher,UA,UA_TestFacility,UA,0.5,day,T1_2,UA_MemoryStick
 Rover_TestStrategy,T1,T1_1,Lego_Rover,TP1,UA_Researcher,UA,UA_TestFacility,UA,0.5,day,T1_2,Lego_Rover
 Rover_TestStrategy,T1,T1_1,Lego_Rover,TP1,UA_Researcher,UA,UA_TestFacility,UA,0.5,day,T1_2,UA_Thermometer

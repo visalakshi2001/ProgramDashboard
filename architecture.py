@@ -13,12 +13,14 @@ def sysarcfunc():
 
     # Make a dropdown selection menu, with a title, and list of options. 
     # this component returns the variable that is selected
-    graphchoice = st.selectbox("Select view", ["System Architechture", "Missions"], index=0)
+    graphchoice = st.selectbox("Select view", ["System Architecture", "Mission Architecture"], index=0)
 
     # initiate a empty diagraph
     dot = graphviz.Digraph(comment='Hierarchy', strict=True)
+
+    cols = st.columns(2)
     
-    if graphchoice == "System Architechture":
+    if graphchoice == "System Architecture":
         # st.dataframe(system)
         for index, row in system.iterrows():
             soi = row["SOI"]
@@ -36,12 +38,12 @@ def sysarcfunc():
             
             if pd.notna(comp):
                 if comp not in dot.body:
-                    dot.node(comp, shape="box")
+                    dot.node(comp,)
                 if pd.notna(subsys):
-                    dot.edge(subsys, comp, label="has component")  
-        st.graphviz_chart(dot, True)
+                    dot.edge(subsys, comp, label="has subject")  
+        cols[0].graphviz_chart(dot, True)
     
-    elif graphchoice == "Missions":
+    elif graphchoice == "Mission Architecture":
         for index, row in  mission.iterrows():
             mission = row["Mission"]
             env = row["Env"]
@@ -52,13 +54,13 @@ def sysarcfunc():
             if pd.notna(env):
                 if env not in dot.body:
                     dot.node(env)
-                dot.edge(mission, env, label="has mission")
+                dot.edge(mission, env, label="has environment")
             if pd.notna(missent):
-                dot.node(missent, shape="box")
+                dot.node(missent)
                 # dot.edge(missname, misscomp, arrowhead="diamond", label="has component")
-                dot.edge(env, missent, label="has component")
+                dot.edge(env, missent, label="has entity")
 
-        st.graphviz_chart(dot, True)
+        cols[0].graphviz_chart(dot, True)
     
 
 
