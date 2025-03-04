@@ -24,14 +24,14 @@ def testresults():
     cols = st.columns(2)
 
     with cols[0]:
-        testcaseopt = st.selectbox("Select Test Case", options=testresultsdf["TestCase"].unique(), index=0)
+        testcaseopt = st.selectbox("Select Test Case", options=testresultsdf["Test Case"].unique(), index=0)
 
-        resultdf = testresultsdf[testresultsdf["TestCase"] == testcaseopt]
+        resultdf = testresultsdf[testresultsdf["Test Case"] == testcaseopt]
 
         teststr = """---\n"""
         for i,row in resultdf.iterrows():
-            testcase = row["TestCase"]
-            testresult = row["TestResult"]
+            testcase = row["Test Case"]
+            testresult = row["Test Result"]
 
             testresult = testresult.split(testcase + "_")[-1]
             testresult = "".join(testresult.split("_"))
@@ -48,11 +48,11 @@ def testresults():
         subcols = st.columns(2)
 
         for i,row in resultdf.iterrows():
-            testcase = row["TestCase"]
-            testresult = row["TestResult"]
-            testvalue = row["TestResultValue"]
-            testunit = row["TestResultUnit"]
-            testsubject = row["TestSubject"]
+            testcase = row["Test Case"]
+            testresult = row["Test Result"]
+            testvalue = row["Test Result Value"]
+            testunit = row["Test Result Unit"]
+            testsubject = row["Test Subject"]
 
             testresult = testresult.split(testcase + "_")[-1]
             testresult = "".join(testresult.split("_"))

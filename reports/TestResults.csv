@@ -1,4 +1,4 @@
-TestCase,TestSubject,TestResult,TestResultValue,TestResultUnit
+Test Case,Test Subject,Test Result,Test Result Value,Test Result Unit
 T1_1,Lego_Rover,T1_1_Ambient_Temperature,70,degF
 T1_1,Lego_Rover,T1_1_BatteryLife,110,minute
 T1_1,Lego_Rover,T1_1_BatteryVoltage_End,0,V
