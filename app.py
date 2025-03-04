@@ -5,6 +5,7 @@ from requirements import dashreqs
 from architecture import sysarcfunc
 from teststrategy import teststrat
 from testfacility import testfacility
+from testresults import testresults
 
 st.set_page_config(page_title="Lego Rover Dashboard", page_icon="📡", layout="wide")
 
@@ -23,6 +24,8 @@ def main():
         testfacility()
     with tabs[3]:
         teststrat()
+    with tabs[4]:
+        testresults()
 
 
 if __name__ == "__main__":
