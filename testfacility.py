@@ -50,10 +50,10 @@ def testfacility():
         maxtemp = tempdf.iloc[2]["Test Facility Temp Value"]
         tempunit = tempdf['Test Facility Temp Unit'][0]
 
-        subcols = st.columns(3)
-        subcols[0].metric(label="Actual Temperature", value=f"{actualtemp} {tempunit}", delta_color="inverse")
-        subcols[1].metric(label="Minimum Temperature", value=f"{mintemp} {tempunit}", delta_color="inverse")
-        subcols[2].metric(label="Maximum Temperature", value=f"{maxtemp} {tempunit}", delta_color="inverse")
+        subcols = st.columns(2)
+        # subcols[0].metric(label="Actual Temperature", value=f"{actualtemp} {tempunit}", delta_color="inverse")
+        subcols[0].metric(label="Minimum Temperature", value=f"{mintemp} {tempunit}", delta_color="inverse")
+        subcols[1].metric(label="Maximum Temperature", value=f"{maxtemp} {tempunit}", delta_color="inverse")
 
 
         st.markdown("##### Available Researcher")

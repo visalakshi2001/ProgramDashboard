@@ -13,15 +13,15 @@ def main():
 
     st.header("🧩 Lego Rover Project Dashboard", divider="red")
 
-    TABS = ["Requirements", "Architecture", "Test Facilities", "Test Strategy", "Test Results"]
+    TABS = ["Test Facilities", "Requirements", "Architecture", "Test Strategy", "Test Results"]
     tabs = st.tabs(TABS)
 
     with tabs[0]:
-        dashreqs()
-    with tabs[1]:
-        sysarcfunc()
-    with tabs[2]:
         testfacility()
+    with tabs[1]:
+        dashreqs()
+    with tabs[2]:
+        sysarcfunc()
     with tabs[3]:
         teststrat()
     with tabs[4]:
