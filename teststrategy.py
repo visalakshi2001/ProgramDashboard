@@ -3,7 +3,9 @@ import pandas as pd
 import numpy as np
 import graphviz
 import plotly.express as px
+from datetime import datetime
 import os
+
 
 from issueswarnings import issuesinfo
 
@@ -267,7 +269,6 @@ def make_sequence_view(strategy, test_case_durations):
             range = [pd.to_datetime("2025-01-01"), pd.to_datetime("2025-01-01") + pd.Timedelta(days=72)]
         )
     )
-    from datetime import datetime
     vlinedate = pd.to_datetime("2025-01-01") + pd.Timedelta(days=65.5)
     displaydate = vlinedate.date()
     fig.add_vline(x=datetime(displaydate.year, displaydate.month, displaydate.day, vlinedate.hour).timestamp() * 1000, annotation_text= f"Day 64")
