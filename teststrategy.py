@@ -224,7 +224,7 @@ def make_sequence_view(strategy, test_case_durations):
         timestep = duration_dict[test]
         if timestep < 1:
             # adjusting the width of the bar less than 1 day to fit the text label
-            timestep = timestep + .78
+            timestep = timestep + .79
         # elif timestep == 7.5:
         #     timestep = 7
         finish = start + pd.Timedelta(days=timestep)
