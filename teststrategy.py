@@ -224,7 +224,7 @@ def make_sequence_view(strategy, test_case_durations):
         timestep = duration_dict[test]
         if timestep < 1:
             # adjusting the width of the bar less than 1 day to fit the text label
-            timestep = timestep + .8
+            timestep = timestep + .79
         # elif timestep == 7.5:
         #     timestep = 7
         finish = start + pd.Timedelta(days=timestep)
@@ -273,7 +273,7 @@ def make_sequence_view(strategy, test_case_durations):
     )
     vlinedate = pd.to_datetime("2025-01-01") + pd.Timedelta(days=65.5)
     displaydate = vlinedate.date()
-    fig.add_vline(x=datetime(displaydate.year, displaydate.month, displaydate.day, vlinedate.hour).timestamp() * 1000, annotation_text= f"Day 64")
+    fig.add_vline(x=datetime(displaydate.year, displaydate.month, displaydate.day, vlinedate.hour+1).timestamp() * 1000 + 500, annotation_text= f"Day 64")
     # OPTIONAL: reverse the Y-axis so the first facility appears on top
     fig.update_yaxes(autorange="reversed")
     
