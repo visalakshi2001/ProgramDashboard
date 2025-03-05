@@ -179,70 +179,70 @@ def make_table_view(strategy):
 
 def make_sequence_view(strategy, test_case_durations):
     
-    if os.path.exists("reports/TestStrategyTimeline.csv"):
-        timeline_df = pd.read_csv("reports/TestStrategyTimeline.csv")
-    else:
-        all_timeline_rows = []
-        # start_date = pd.to_datetime("2025-01-01")
-        current_start = pd.to_datetime("2025-01-01")
+    # if os.path.exists("reports/TestStrategyTimeline.csv"):
+    #     timeline_df = pd.read_csv("reports/TestStrategyTimeline.csv")
+    # else:
+    all_timeline_rows = []
+    # start_date = pd.to_datetime("2025-01-01")
+    current_start = pd.to_datetime("2025-01-01")
 
-        # We'll sort the tests by the order of occurs before
-        sorted_tests = strategy["Test Case"].tolist()
-        facilities = strategy["Facility"].tolist()
+    # We'll sort the tests by the order of occurs before
+    sorted_tests = strategy["Test Case"].tolist()
+    facilities = strategy["Facility"].tolist()
 
-        previous_facility = None
-        settests = set()
-        duration_dict = test_case_durations.to_dict()
-        for i, test in enumerate(sorted_tests):
+    previous_facility = None
+    settests = set()
+    duration_dict = test_case_durations.to_dict()
+    for i, test in enumerate(sorted_tests):
 
-            if test in settests:
-                continue
-            settests.add(test)
+        if test in settests:
+            continue
+        settests.add(test)
 
-            facility = facilities[i]
+        facility = facilities[i]
 
-            if previous_facility is not None and facility != previous_facility:
-                transition_start  = current_start
-                transition_finish = transition_start + pd.Timedelta(days=5)  # 6-day block minus 1
-                # Add a row to represent the transition block
-                all_timeline_rows.append({
-                    "Facility": "UA_TestFacility",          # or any label you prefer
-                    "Test Case": f"Transit",
-                    "Start":    transition_start,
-                    "Finish":   transition_finish
-                })
-                all_timeline_rows.append({
-                    "Facility": "VT_TestFacility",          # or any label you prefer
-                    "Test Case": f"Transit",
-                    "Start":    transition_start,
-                    "Finish":   transition_finish
-                })
-                # Now move the pointer to the next day after the transition
-                current_start = transition_finish #+ pd.Timedelta(days=1)
-            
-            start = current_start
-            timestep = duration_dict[test]
-            if timestep < 1:
-                # adjusting the width of the bar less than 1 day to fit the text label
-                timestep = timestep + .8
-            # elif timestep == 7.5:
-            #     timestep = 7
-            finish = start + pd.Timedelta(days=timestep)
-            
-            # We'll store one row per test in the final timeline
+        if previous_facility is not None and facility != previous_facility:
+            transition_start  = current_start
+            transition_finish = transition_start + pd.Timedelta(days=5)  # 6-day block minus 1
+            # Add a row to represent the transition block
             all_timeline_rows.append({
-                "Facility": facility,
-                "Test Case": test,
-                "Start":    start,
-                "Finish":   finish
+                "Facility": "UA_TestFacility",          # or any label you prefer
+                "Test Case": f"Transit",
+                "Start":    transition_start,
+                "Finish":   transition_finish
             })
+            all_timeline_rows.append({
+                "Facility": "VT_TestFacility",          # or any label you prefer
+                "Test Case": f"Transit",
+                "Start":    transition_start,
+                "Finish":   transition_finish
+            })
+            # Now move the pointer to the next day after the transition
+            current_start = transition_finish #+ pd.Timedelta(days=1)
+        
+        start = current_start
+        timestep = duration_dict[test]
+        if timestep < 1:
+            # adjusting the width of the bar less than 1 day to fit the text label
+            timestep = timestep + .8
+        # elif timestep == 7.5:
+        #     timestep = 7
+        finish = start + pd.Timedelta(days=timestep)
+        
+        # We'll store one row per test in the final timeline
+        all_timeline_rows.append({
+            "Facility": facility,
+            "Test Case": test,
+            "Start":    start,
+            "Finish":   finish
+        })
 
-            current_start = finish #+ pd.Timedelta(days=1)
-            previous_facility = facility
+        current_start = finish #+ pd.Timedelta(days=1)
+        previous_facility = facility
 
-        timeline_df = pd.DataFrame(all_timeline_rows)
+    timeline_df = pd.DataFrame(all_timeline_rows)
 
-        timeline_df.to_csv("reports/TestStrategyTimeline.csv", index=False)
+    timeline_df.to_csv("reports/TestStrategyTimeline.csv", index=False)
 
     # display the text of Text case on top of each bar
     fig = px.timeline(
