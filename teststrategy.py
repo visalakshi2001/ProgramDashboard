@@ -157,7 +157,7 @@ def make_table_view(strategy):
     st.markdown("<h6>Test Strategy Explorer</h6>", True)
     subsetstrategy = strategy.drop(columns=["Test Equipment", "Occurs Before"])
     subsetcols = [col for col in subsetstrategy.columns if col != "Duration Value"]
-    subsetstrategy = subsetstrategy.groupby(subsetcols, as_index=False)["Duration Value"].sum()
+    subsetstrategy = subsetstrategy.groupby(subsetcols, as_index=False)["Duration Value"].max()
     exp = st.expander("View Entire Test Strategy Table", icon="🗃️")
     exp.dataframe(subsetstrategy, hide_index=True, use_container_width=True)
 
@@ -224,7 +224,9 @@ def make_sequence_view(strategy, test_case_durations):
             timestep = duration_dict[test]
             if timestep < 1:
                 # adjusting the width of the bar less than 1 day to fit the text label
-                timestep = timestep+.8
+                timestep = timestep + .8
+            # elif timestep == 7.5:
+            #     timestep = 7
             finish = start + pd.Timedelta(days=timestep)
             
             # We'll store one row per test in the final timeline
