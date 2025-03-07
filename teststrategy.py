@@ -156,10 +156,12 @@ def make_graph_view(strategy):
 def make_table_view(strategy):
     st.markdown("<h6>Test Strategy Explorer</h6>", True)
     subsetstrategy = strategy.drop(columns=["Test Equipment", "Occurs Before"])
+    # save column order for later displaying
+    column_order = subsetstrategy.columns
     subsetcols = [col for col in subsetstrategy.columns if col != "Duration Value"]
     subsetstrategy = subsetstrategy.groupby(subsetcols, as_index=False)["Duration Value"].max()
     exp = st.expander("View Entire Test Strategy Table", icon="🗃️")
-    exp.dataframe(subsetstrategy, hide_index=True, use_container_width=True)
+    exp.dataframe(subsetstrategy[column_order], hide_index=True, use_container_width=True)
 
     cols = st.columns([0.1,0.9])
     with cols[0]:
