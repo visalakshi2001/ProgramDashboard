@@ -1,5 +1,6 @@
 progdash/
 __pycache__/
 dashboard.py
+.DS_Store
 
 reports/TestStrategyTimeline.csv
