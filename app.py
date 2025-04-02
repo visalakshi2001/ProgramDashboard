@@ -1,5 +1,5 @@
 import streamlit as st
-from supabase import create_client, Client
+# from supabase import create_client, Client
 import json
 import string
 import pandas as pd
@@ -38,11 +38,11 @@ def main():
         testresults()
 
 
-@st.cache_resource
-def init_connection():
-    url = st.secrets["connections"]["supabase"]["SUPABASE_URL"]
-    key = st.secrets["connections"]["supabase"]["SUPABASE_KEY"]
-    print("URL and Key caught successfully")
+# @st.cache_resource
+# def init_connection():
+#     url = st.secrets["connections"]["supabase"]["SUPABASE_URL"]
+#     key = st.secrets["connections"]["supabase"]["SUPABASE_KEY"]
+#     print("URL and Key caught successfully")
     # return create_client(url, key)
 
 # @st.dialog("Select a tab below and replace its data")
@@ -102,7 +102,7 @@ if __name__ == "__main__":
     if "conn" not in st.session_state:
         st.session_state["conn"] = None
     # conn = 
-    init_connection()
+    # init_connection()
     # st.session_state["conn"] = conn
     main()
 
