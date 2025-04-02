@@ -42,7 +42,7 @@ def main():
 def init_connection():
     url = st.secrets["connections"]["supabase"]["SUPABASE_URL"]
     key = st.secrets["connections"]["supabase"]["SUPABASE_KEY"]
-    print("URL and Key caught successfully")
+    st.write("URL and Key caught successfully")
     return
     # return create_client(url, key)
 
