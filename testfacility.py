@@ -8,6 +8,10 @@ def testfacility():
 
     cols = st.columns(2)
 
+    facility_cols = facility.columns.to_series()
+
+    facility.columns = facility_cols.apply(lambda y: ''.join(map(lambda x: x if x.islower() else " "+x, y)).strip())
+
     with cols[0]:
         uafacilitydf = facility[facility["Test Facility"] == "UA_TestFacility"]
 
