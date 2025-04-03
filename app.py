@@ -39,7 +39,8 @@ def main():
     with tabs[4]:
         teststrat()
     with tabs[5]:
-        testresults()
+        # testresults()
+        pass
     with tabs[6]:
         issues_view()
 
