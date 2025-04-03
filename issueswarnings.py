@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import re
 
 def issues_view():
     issuesinfo()
@@ -36,6 +36,17 @@ def issuesinfo(curr_tab=""):
 
 def create_issues():
     strategy = pd.read_csv("reports/TestStrategy.csv")
+
+    strategy_cols = strategy.columns.to_series()
+
+    strategy_cols = strategy_cols.apply(lambda y: re.sub("\s{2,}", " ", y))
+    strategy_cols = strategy_cols.apply(lambda y: ''.join(map(lambda x: x if x.islower() else " "+x, y)).strip())
+
+    strategy_cols = strategy_cols.apply(lambda y: re.sub("Org$", "Organization", y))
+    strategy_cols = strategy_cols.apply(lambda y: re.sub("\s{2,}", " ", y))
+
+    strategy.columns = strategy_cols
+
     issues_dict = {}
     issues_dict["test_strategy"] = []
     issues_dict["requirements"] = []

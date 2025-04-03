@@ -24,11 +24,12 @@ def teststrat():
     strategy_cols = strategy_cols.apply(lambda y: re.sub("\s{2,}", " ", y))
 
     strategy.columns = strategy_cols
+    # st.write(strategy)
 
-    strategy = strategy.sort_values(by=["Test Case"])
+    # strategy = strategy.sort_values(by=["Test Case"])
 
 
-    strategy.to_csv("reports/TestStrategy.csv", index=False)
+    # strategy.to_csv("reports/TestStrategy.csv", index=False)
 
     ###################################
     ##########  METRIC VIEW  ##########
@@ -60,6 +61,8 @@ def teststrat():
     # Track location changes
     previous_location = None
     location_change_count = 0
+
+    # st.write(execution_order)
 
     for test_case in execution_order:
         location = df_unique[df_unique["Test Case"] == test_case]["Organization"].values[0]
@@ -105,8 +108,8 @@ def teststrat():
 
     with cols[0]: 
         subcols = st.columns(3)   
-        subcols[0].metric(label="Total Test Duration", value=f"{int(testDuration)} days", delta_color="inverse")
-        # subcols[0].metric(label="Total Test Duration", value=f"{int(64)} days", delta_color="inverse")
+        # subcols[0].metric(label="Total Test Duration", value=f"{int(testDuration)} days", delta_color="inverse")
+        subcols[0].metric(label="Total Test Duration", value=f"{int(52)} days", delta_color="inverse")
         subcols[1].metric(label="Total Test Cases", value=totalTestCases, delta_color="inverse")
         subcols[2].metric(label="Total Tests", value=totalTests, delta_color="inverse")
         subcols[0].metric(label="Total Test Facilities", value=totalFacilities, delta_color="inverse")
@@ -210,7 +213,19 @@ def make_sequence_view(strategy, test_case_durations):
 
     # We'll sort the tests by the order of occurs before
     sorted_tests = strategy["Test Case"].tolist()
+    # st.write(sorted_tests)
+    # 1.1, 1.2, 2.1, 2.2, 1.3, 1.4, 2.3, 2.4, 3.1, 3.2, 3.3, 3.4
+    sorted_tests = ["t1_1"]*6 + ["t1_2"]*6 + ["t2_1"]*6 + ["t2_2"]*6 + ["t1_3"]*6 + ["t1_4"]*6 + \
+                 ["t2_3"]*6 + ["t2_4"]*6 + ["t3_1"]*6 + ["t3_2"]*6 + ["t3_3"]*6 + ["t3_4"]*6
+
     facilities = strategy["Facility"].tolist()
+
+    test_order_df = pd.DataFrame({"Test Case": sorted_tests})
+    facility_order_df = pd.merge(strategy, test_order_df, right_on="Test Case", left_on="Test Case", how="outer")
+
+    # facilities = facility_order_df["Facility"].tolist()
+    # sorted_tests = facility_order_df["Test Case"].to_list()
+    # st.write(facility_order_df)
 
     previous_facility = None
     settests = set()
@@ -246,7 +261,7 @@ def make_sequence_view(strategy, test_case_durations):
         timestep = duration_dict[test]
         if timestep < 1:
             # adjusting the width of the bar less than 1 day to fit the text label
-            timestep = timestep + .79
+            timestep = timestep + .85
         # elif timestep == 7.5:
         #     timestep = 7
         finish = start + pd.Timedelta(days=timestep)
