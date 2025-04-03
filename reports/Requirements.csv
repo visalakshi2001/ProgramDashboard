@@ -1,3 +1,26 @@
-ReqID,ReqName,ReqDescription,System
-MR1,Nominal Temperature Range Requirement,The system shall operate in an environment with a maximum temperature range of 40-70 deg F.,Lego_Rover
-MR2,Minimum Battery Life,The system shall have a battery life of at least 20 minutes under all nominal temperature range.,Lego_Rover
+ReqID,ReqName,ReqDescription,ReqSubject,SatisfiedBy,VerifiedBy
+19543,Terrain A,The system shall operate in a low-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t1_2
+19543,Terrain A,The system shall operate in a low-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t1_4
+19543,Terrain A,The system shall operate in a low-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t2_2
+19543,Terrain A,The system shall operate in a low-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t2_4
+19543,Terrain A,The system shall operate in a low-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t3_2
+19543,Terrain A,The system shall operate in a low-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t3_4
+19544,Terrain B,The system shall operate in a high-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t1_1
+19544,Terrain B,The system shall operate in a high-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t1_3
+19544,Terrain B,The system shall operate in a high-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t2_1
+19544,Terrain B,The system shall operate in a high-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t2_3
+19544,Terrain B,The system shall operate in a high-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t3_1
+19544,Terrain B,The system shall operate in a high-friction terrain for at least 100 minutes ,lego_Rover,lr_Mobility,t3_3
+19545,Test Strategy Duration,The duration of the test strategy shall be no greater than 60 days ,TestStrategy,Rover_TestStrategy,
+19546,Temperature A,The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t1_1
+19546,Temperature A,The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t1_2
+19546,Temperature A,The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t2_1
+19546,Temperature A,The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t2_2
+19546,Temperature A,The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t3_1
+19546,Temperature A,The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t3_2
+19547,Temperature B,The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t1_3
+19547,Temperature B,The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t1_4
+19547,Temperature B,The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t2_3
+19547,Temperature B,The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t2_4
+19547,Temperature B,The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t3_3
+19547,Temperature B,The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes ,lego_Rover,lr_Mobility,t3_4

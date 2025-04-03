@@ -10,6 +10,8 @@ from architecture import sysarcfunc
 from teststrategy import teststrat
 from testfacility import testfacility
 from testresults import testresults
+from homepage import homepageview
+from issueswarnings import issues_view
 
 from jsontocsv import json_to_csv
 
@@ -17,26 +19,29 @@ st.set_page_config(page_title="Lego Rover Dashboard", page_icon="📡", layout="
 
 def main():
 
-    TABS = ["Test Facilities", "Requirements", "Architecture", "Test Strategy", "Test Results"]
+    TABS = ["Home Page", "Test Facilities", "Requirements", "Architecture", "Test Strategy", "Test Results"]
     
     if st.button("🪄 Edit Data"):
         replace_data(TABS)
 
     st.header("🧩 Lego Rover Project Dashboard", divider="red")
 
-    tabs = st.tabs(TABS)
+    tabs = st.tabs(TABS + ["Issues/Warnings"])
 
     with tabs[0]:
-        testfacility()
+        homepageview(TABS)
     with tabs[1]:
-        dashreqs()
+        testfacility()
     with tabs[2]:
-        sysarcfunc()
+        dashreqs()
     with tabs[3]:
-        teststrat()
+        sysarcfunc()
     with tabs[4]:
+        teststrat()
+    with tabs[5]:
         testresults()
-
+    with tabs[6]:
+        issues_view()
 
 @st.cache_resource
 def init_connection():
@@ -49,11 +54,12 @@ def replace_data(TABS):
     selected_tabs = st.multiselect("Choost the TAB(s) whose data you wish to replace:", options=TABS)
 
     data_ties = {
-        TABS[0]: "TestFacilities",
-        TABS[1]: "Requirements",
-        TABS[2]: "SystemArchitecture",
-        TABS[3]: "TestStrategy",
-        TABS[4]: "TestResults",
+        TABS[0]: "TripleCount",
+        TABS[1]: "TestFacilities",
+        TABS[2]: "Requirements",
+        TABS[3]: "SystemArchitecture",
+        TABS[4]: "TestStrategy",
+        TABS[5]: "TestResults",
     }
 
     required_files = [data_ties[tab] + ".json" for tab in selected_tabs]

@@ -4,6 +4,7 @@ import numpy as np
 import graphviz
 import plotly.express as px
 from datetime import datetime
+import re
 import os
 
 
@@ -14,6 +15,21 @@ def teststrat():
     strategy = pd.read_csv("reports/TestStrategy.csv")
     facilities = pd.read_csv("reports/TestFacilities.csv")
 
+    strategy_cols = strategy.columns.to_series()
+
+    strategy_cols = strategy_cols.apply(lambda y: re.sub("\s{2,}", " ", y))
+    strategy_cols = strategy_cols.apply(lambda y: ''.join(map(lambda x: x if x.islower() else " "+x, y)).strip())
+
+    strategy_cols = strategy_cols.apply(lambda y: re.sub("Org$", "Organization", y))
+    strategy_cols = strategy_cols.apply(lambda y: re.sub("\s{2,}", " ", y))
+
+    strategy.columns = strategy_cols
+
+    strategy = strategy.sort_values(by=["Test Case"])
+
+
+    strategy.to_csv("reports/TestStrategy.csv", index=False)
+
     ###################################
     ##########  METRIC VIEW  ##########
     ###################################
@@ -22,7 +38,7 @@ def teststrat():
     total_test_case_duration = test_case_durations.sum()
 
     # Identify location changes and add 6 days per change
-    df_unique = strategy.drop_duplicates(subset=["Test Case"])[["Test Case", "Organization", "Occurs Before"]]
+    df_unique = strategy.drop_duplicates(subset=["Test Case"])[["Test Case", "Facility", "Organization", "Occurs Before"]]
 
     # Sort test cases based on order of execution
     execution_order = []
@@ -47,7 +63,9 @@ def teststrat():
 
     for test_case in execution_order:
         location = df_unique[df_unique["Test Case"] == test_case]["Organization"].values[0]
-        if previous_location and location != previous_location:
+        if pd.isna(location):
+            location = df_unique[df_unique["Test Case"] == test_case]["Facility"].values[0]
+        if previous_location and location != previous_location and not pd.isna(location):
             location_change_count += 1
         previous_location = location
 
@@ -88,6 +106,7 @@ def teststrat():
     with cols[0]: 
         subcols = st.columns(3)   
         subcols[0].metric(label="Total Test Duration", value=f"{int(testDuration)} days", delta_color="inverse")
+        # subcols[0].metric(label="Total Test Duration", value=f"{int(64)} days", delta_color="inverse")
         subcols[1].metric(label="Total Test Cases", value=totalTestCases, delta_color="inverse")
         subcols[2].metric(label="Total Tests", value=totalTests, delta_color="inverse")
         subcols[0].metric(label="Total Test Facilities", value=totalFacilities, delta_color="inverse")
@@ -96,7 +115,7 @@ def teststrat():
 
 
     with cols[1]:
-        issuesinfo()
+        issuesinfo(curr_tab="test_strategy")
     
     cols[0].write("---")
     # viewopts = ["Structure", "Table", "Sequence Timeline"]
@@ -156,6 +175,7 @@ def make_graph_view(strategy):
 def make_table_view(strategy):
     st.markdown("<h6>Test Strategy Explorer</h6>", True)
     subsetstrategy = strategy.drop(columns=["Test Equipment", "Occurs Before"])
+    subsetstrategy = subsetstrategy.dropna(axis=1, how="all")
     # save column order for later displaying
     column_order = subsetstrategy.columns
     subsetcols = [col for col in subsetstrategy.columns if col != "Duration Value"]
@@ -208,13 +228,13 @@ def make_sequence_view(strategy, test_case_durations):
             transition_finish = transition_start + pd.Timedelta(days=5)  # 6-day block minus 1
             # Add a row to represent the transition block
             all_timeline_rows.append({
-                "Facility": "UA_TestFacility",          # or any label you prefer
+                "Facility": "Yuma_TestFacility",          # or any label you prefer
                 "Test Case": f"Transit",
                 "Start":    transition_start,
                 "Finish":   transition_finish
             })
             all_timeline_rows.append({
-                "Facility": "VT_TestFacility",          # or any label you prefer
+                "Facility": "MtLemmon_TestFacility",          # or any label you prefer
                 "Test Case": f"Transit",
                 "Start":    transition_start,
                 "Finish":   transition_finish
@@ -273,9 +293,9 @@ def make_sequence_view(strategy, test_case_durations):
             range = [pd.to_datetime("2025-01-01"), pd.to_datetime("2025-01-01") + pd.Timedelta(days=72)]
         )
     )
-    vlinedate = pd.to_datetime("2025-01-01") + pd.Timedelta(days=65.5)
-    displaydate = vlinedate.date()
-    fig.add_vline(x=datetime(displaydate.year, displaydate.month, displaydate.day, vlinedate.hour+1).timestamp() * 1000 + 500, annotation_text= f"Day 64")
+    # vlinedate = pd.to_datetime("2025-01-01") + pd.Timedelta(days=65.5)
+    # displaydate = vlinedate.date()
+    # fig.add_vline(x=datetime(displaydate.year, displaydate.month, displaydate.day, vlinedate.hour+1).timestamp() * 1000 + 500, annotation_text= f"Day 64")
     # OPTIONAL: reverse the Y-axis so the first facility appears on top
     fig.update_yaxes(autorange="reversed")
     

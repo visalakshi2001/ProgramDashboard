@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+from issueswarnings import issuesinfo
 
 def testresults():
 
@@ -20,6 +21,12 @@ def testresults():
     )
 
     testresultsdf = pd.read_csv("reports/TestResults.csv")
+
+    results_cols = testresultsdf.columns.to_series()
+
+    results_cols = results_cols.apply(lambda y: ''.join(map(lambda x: x if x.islower() else " "+x, y)).strip())
+
+    testresultsdf.columns = results_cols.apply(lambda y: y.replace("Org", "Organization"))
 
     st.markdown("#### Test Subject: Lego_Rover")
     cols = st.columns(2)
@@ -81,5 +88,12 @@ def testresults():
                 
                 subcols[i%3].metric(label=f"🧮 {testresult}", value=f"{testvalue} {testunit}", delta=f"🔭 Test Case: {testcase}")
     
-    exp = st.expander("View Test Results", icon="📊")
-    exp.dataframe(testresultsdf, hide_index=True, use_container_width=True)
+
+    cols = st.columns([0.6, 0.4])
+
+    with cols[0]:
+        exp = st.expander("View Test Results", icon="📊")
+        exp.dataframe(testresultsdf, hide_index=True, use_container_width=True)
+    
+    with cols[1]:
+        issuesinfo(curr_tab="test_results")

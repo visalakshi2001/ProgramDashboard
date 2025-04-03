@@ -1,0 +1,207 @@
+{ "head": {
+    "vars": [ "ReqID" , "ReqName" , "ReqDescription" , "ReqSubject" , "SatisfiedBy" , "VerifiedBy" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "ReqID": { "type": "literal" , "value": "19543" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t1_2" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19543" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t1_4" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19543" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t2_2" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19543" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t2_4" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19543" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t3_2" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19543" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t3_4" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19544" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t1_1" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19544" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t1_3" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19544" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t2_1" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19544" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t2_3" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19544" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t3_1" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19544" } ,
+        "ReqName": { "type": "literal" , "value": "Terrain B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-friction terrain for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t3_3" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19545" } ,
+        "ReqName": { "type": "literal" , "value": "Test Strategy Duration" } ,
+        "ReqDescription": { "type": "literal" , "value": "The duration of the test strategy shall be no greater than 60 days " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#TestStrategy" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Rover_TestStrategy" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19546" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t1_1" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19546" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t1_2" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19546" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t2_1" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19546" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t2_2" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19546" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t3_1" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19546" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature A" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a high-temp (at least 70degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t3_2" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19547" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t1_3" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19547" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t1_4" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19547" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t2_3" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19547" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t2_4" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19547" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t3_3" }
+      } ,
+      { 
+        "ReqID": { "type": "literal" , "value": "19547" } ,
+        "ReqName": { "type": "literal" , "value": "Temperature B" } ,
+        "ReqDescription": { "type": "literal" , "value": "The system shall operate in a low-temp (at most 40degF) environment for at least 100 minutes " } ,
+        "ReqSubject": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "SatisfiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "VerifiedBy": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#t3_4" }
+      }
+    ]
+  }
+}

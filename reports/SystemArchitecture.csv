@@ -1,4 +1,4 @@
 SOI,Subsystem,Component
-Lego_Rover,LR_Power,LR_Battery
-Lego_Rover,LR_Comms,
-Lego_Rover,LR_Mobility,LR_Wheels
+lego_Rover,lr_Power,battery
+lego_Rover,lr_Mobility,wheels
+lego_Rover,lr_Comms,
