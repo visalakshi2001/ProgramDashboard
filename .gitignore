@@ -10,3 +10,5 @@ reports/TestStrategy copy.csv
 reports/TestResults copy.csv
 
 reports copy/
+
+.devcontainer/
