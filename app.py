@@ -4,6 +4,7 @@ import json
 import string
 import pandas as pd
 import os
+from glob import glob
 
 # from dashboard import  dashschedule, dashresults
 from requirements import dashreqs
@@ -110,6 +111,12 @@ def replace_data(TABS):
 def run_on_new_session():
     conn = st.session_state["conn"]
 
+    if os.path.exists("reports/"):
+        all_csv_files = glob("reports/*.csv")
+        if len(all_csv_files) > 5:
+            for file in all_csv_files:
+                os.remove(file)
+
     with st.spinner("Populating tabs"):
         try:
             response = (
@@ -127,10 +134,10 @@ def run_on_new_session():
             print("CANNOT FETCH LIST OF FILES FROM BUCKET") 
         
         if response:
-            listoffiles = response[1:]
+            listoffiles = response
         else:
             listoffiles = []
-        for downloadedfile in listoffiles[1:]:
+        for downloadedfile in listoffiles:
             filename = downloadedfile["name"]
             savefilename = downloadedfile["name"].split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".json"
             try:

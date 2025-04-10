@@ -51,11 +51,11 @@ def json_to_csv(csv_output_path, json_input_path="", json_file_object=None):
 
             writer.writerow(row_data)
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     # json_to_csv(json_input_path="reports/MissionArchitecture.json", csv_output_path="reports/MissionArchitecture.csv")
     # json_to_csv(json_input_path="reports/Requirements.json", csv_output_path="reports/Requirements.csv")
     # json_to_csv(json_input_path="reports/SystemArchitecture.json", csv_output_path="reports/SystemArchitecture.csv")
     # json_to_csv(json_input_path="reports/TestFacilities.json", csv_output_path="reports/TestFacilities.csv")
     # json_to_csv(json_input_path="reports/TestResults.json", csv_output_path="reports/TestResults.csv")
-    json_to_csv(json_input_path="reports/TestStrategy.json", csv_output_path="reports/TestStrategy.csv")
+    # json_to_csv(json_input_path="reports/TestStrategy.json", csv_output_path="reports/TestStrategy.csv")
     # json_to_csv(json_input_path="reports/TripleCount.json", csv_output_path="reports/TripleCount.csv")
