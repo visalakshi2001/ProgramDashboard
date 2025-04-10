@@ -51,7 +51,7 @@ def issuesinfo(curr_tab=""):
 
 
 def create_issues():
-    strategy = pd.read_csv("reports/TestStrategy copy.csv")
+    strategy = pd.read_csv("reports/TestStrategy.csv")
 
     strategy_cols = strategy.columns.to_series()
 
