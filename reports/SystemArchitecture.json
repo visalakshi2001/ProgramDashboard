@@ -4,18 +4,18 @@
   "results": {
     "bindings": [
       { 
-        "SOI": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#Lego_Rover" } ,
-        "Subsystem": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_System#LR_Power" } ,
-        "Component": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_System#LR_Battery" }
+        "SOI": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "Subsystem": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Power" } ,
+        "Component": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#battery" }
       } ,
       { 
-        "SOI": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#Lego_Rover" } ,
-        "Subsystem": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_System#LR_Comms" }
+        "SOI": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "Subsystem": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Mobility" } ,
+        "Component": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#wheels" }
       } ,
       { 
-        "SOI": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_Mission#Lego_Rover" } ,
-        "Subsystem": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_System#LR_Mobility" } ,
-        "Component": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_System#LR_Wheels" }
+        "SOI": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lego_Rover" } ,
+        "Subsystem": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#lr_Comms" }
       }
     ]
   }

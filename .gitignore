@@ -4,3 +4,12 @@ dashboard.py
 .DS_Store
 
 reports/TestStrategyTimeline.csv
+
+# .streamlit/
+
+reports/TestStrategy copy.csv
+reports/TestResults copy.csv
+
+reports copy/
+
+.devcontainer/

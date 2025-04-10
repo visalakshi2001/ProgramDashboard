@@ -1,295 +1,903 @@
 { "head": {
-    "vars": [ "TestFacility" , "Role" , "TestFacilityTemp" , "TestFacilityTempValue" , "TestFacilityTempUnit" , "Equipment" ]
+    "vars": [ "TestFacility" , "TestFacilityTemp" , "TestFacilityTempMeas" , "TestFacilityTempValue" , "TestFacilityTempUnit" , "Equipment" ]
   } ,
   "results": {
     "bindings": [
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_MemoryStick" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Thermometer" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Stopwatch" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_BatteryCharger" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Multimeter" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Fridge" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MinTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_MemoryStick" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MinTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Thermometer" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MinTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Stopwatch" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MinTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_BatteryCharger" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MinTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Multimeter" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MinTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Fridge" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_MemoryStick" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Thermometer" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Stopwatch" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_BatteryCharger" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Multimeter" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#UA_Fridge" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_MemoryStick" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Stopwatch" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Thermometer" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_BatteryCharger" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Multimeter" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_ActualTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
-        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Fridge" }
-      } ,
-      { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MinTemp" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp_Measurement" } ,
         "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "32" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_MemoryStick" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Thermometer" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MinTemp" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp_Measurement" } ,
         "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "32" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Stopwatch" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Stopwatch" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MinTemp" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp_Measurement" } ,
         "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "32" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Thermometer" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Treadmill" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MinTemp" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp_Measurement" } ,
         "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "32" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_BatteryCharger" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_BatteryCharger" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MinTemp" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp_Measurement" } ,
         "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "32" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Multimeter" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Multimeter" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MinTemp" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp_Measurement" } ,
         "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "32" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Fridge" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Fridge" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MinTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "32" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_MemoryStick" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_MemoryStick" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Stopwatch" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Thermometer" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Thermometer" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Stopwatch" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_BatteryCharger" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Treadmill" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MaxTemp" } ,
-        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Multimeter" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_BatteryCharger" }
       } ,
       { 
-        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility" } ,
-        "Role": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Researcher" } ,
-        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_TestFacility_MaxTemp" } ,
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp_Measurement" } ,
         "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
         "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
-        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover/Lego_Rover_TestFacilities#VT_Fridge" }
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.MtLemmon_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_4-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmon_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_3-MtLemmonTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#MtLemmonTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MaxTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "75" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T1_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility_SysML_v2-Part-a09e05a8-c61b-4ed4-a03e-8e00402e81bf.Yuma_TestFacility_MinTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "65" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T3_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_2-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Treadmill" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Stopwatch" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_BatteryCharger" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Thermometer" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Fridge" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Multimeter" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_MemoryStick" }
+      } ,
+      { 
+        "TestFacility": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#Yuma_TestFacility" } ,
+        "TestFacilityTemp": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp" } ,
+        "TestFacilityTempMeas": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#T2_1-YumaTF_TestFacility_ActualTemp_Measurement" } ,
+        "TestFacilityTempValue": { "type": "literal" , "datatype": "http://www.w3.org/2000/01/rdf-schema#Literal" , "value": "70" } ,
+        "TestFacilityTempUnit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Equipment": { "type": "uri" , "value": "http://uaontologies.com/Lego_Rover_Test/SIE523#YumaTF_Treadmill" }
       }
     ]
   }

@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import re
 
 def testfacility():
 
@@ -8,28 +8,38 @@ def testfacility():
 
     cols = st.columns(2)
 
+    facility_cols = facility.columns.to_series()
+
+    facility.columns = facility_cols.apply(lambda y: ''.join(map(lambda x: x if x.islower() else " "+x, y)).strip())
+
+
     with cols[0]:
-        uafacilitydf = facility[facility["Test Facility"] == "UA_TestFacility"]
+        mtlemmonfacilitydf = facility[facility["Test Facility"] == "MtLemmon_TestFacility"]
 
-        st.subheader("🏭 UA Test Facility", divider="orange")
+        st.subheader("🏭 Mt. Lemmon Test Facility", divider="orange")
 
-        populate_facility_details(uafacilitydf)
+        populate_facility_details(mtlemmonfacilitydf)
 
     with cols[1]:
-        vtfacilitydf = facility[facility["Test Facility"] == "VT_TestFacility"]
+        yumafacilitydf = facility[facility["Test Facility"] == "Yuma_TestFacility"]
 
-        st.subheader("🏭 VT Test Facility", divider="orange")
+        st.subheader("🏭 Yuma Test Facility", divider="orange")
 
-        populate_facility_details(vtfacilitydf)
+        populate_facility_details(yumafacilitydf)
 
 def populate_facility_details(df):
 
     # get the facility temperature details
     tempdf = df[["Test Facility Temp", "Test Facility Temp Value", "Test Facility Temp Unit"]].drop_duplicates().reset_index(drop=True)
 
-    actualtemp = tempdf.iloc[0]["Test Facility Temp Value"]
-    mintemp = tempdf.iloc[1]["Test Facility Temp Value"]
-    maxtemp = tempdf.iloc[2]["Test Facility Temp Value"]
+
+    tempdf["Test Facility Temp"] = tempdf["Test Facility Temp"].apply(lambda x: "Min_Temp" if re.findall("(Min.*Temp)", x) != [] else x)
+    tempdf["Test Facility Temp"] = tempdf["Test Facility Temp"].apply(lambda x: "Max_Temp" if re.findall("(Max.*Temp)", x) != [] else x)
+    tempdf["Test Facility Temp"] = tempdf["Test Facility Temp"].apply(lambda x: "Actual_Temp" if re.findall("(Actual.*Temp)", x) != [] else x)
+
+    # actualtemp = tempdf.iloc[0]["Test Facility Temp Value"]
+    mintemp = tempdf[tempdf["Test Facility Temp"] == "Min_Temp"].iloc[0]["Test Facility Temp Value"]
+    maxtemp = tempdf[tempdf["Test Facility Temp"] == "Max_Temp"].iloc[0]["Test Facility Temp Value"]
     tempunit = tempdf['Test Facility Temp Unit'][0]
 
     st.markdown("##### Available Test Conditions")
@@ -40,8 +50,12 @@ def populate_facility_details(df):
 
 
     st.markdown("##### Available Researchers")
-    researcher = df["Role"].value_counts().index
-    st.metric(label=f"Role:", value=researcher[0])
+    researcher = df.iloc[0]["Test Facility"]
+    researcher = researcher.split("_")[0].split("TestFacility")[0]
+    researcher = researcher + "_Researcher"
+    st.markdown(f"> {researcher}", unsafe_allow_html=True)
+    # researcher = df["Role"].value_counts().index
+    # st.metric(label=f"Role:", value=researcher[0])
 
     st.markdown("##### Available Equipments")
     vtequipment = df["Equipment"].value_counts().index
