@@ -5,3 +5,6 @@ dashboard.py
 reports/TestStrategyTimeline.csv
 
 .streamlit/
+
+reports/TestStrategy copy.csv
+reports/TestResults copy.csv

@@ -3,6 +3,7 @@ from supabase import create_client, Client
 import json
 import string
 import pandas as pd
+import os
 
 # from dashboard import  dashschedule, dashresults
 from requirements import dashreqs
@@ -39,8 +40,10 @@ def main():
     with tabs[4]:
         teststrat()
     with tabs[5]:
-        testresults()
-        # pass
+        if os.path.exists("reports/TestResults.csv"):
+            testresults()
+        else:
+            st.write("Use the Edit Data button to upload TestResults.json file")
     with tabs[6]:
         issues_view()
 
@@ -52,6 +55,8 @@ def init_connection():
 
 @st.dialog("Select a tab below and replace its data")
 def replace_data(TABS):
+    conn = st.session_state["conn"]
+
     selected_tabs = st.multiselect("Choost the TAB(s) whose data you wish to replace:", options=TABS)
 
     data_ties = {
@@ -102,6 +107,48 @@ def replace_data(TABS):
     if st.button("Done"):
         st.rerun(scope="app")
 
+def run_on_new_session():
+    conn = st.session_state["conn"]
+
+    with st.spinner("Populating tabs"):
+        try:
+            response = (
+                conn.storage
+                .from_("legorover")
+                .list(
+                    "reports",
+                    {
+                        "limit": 100,
+                        "offset": 0,
+                    }
+                )
+            ) 
+        except:
+            print("CANNOT FETCH LIST OF FILES FROM BUCKET") 
+        
+        if response:
+            listoffiles = response[1:]
+        else:
+            listoffiles = []
+        for downloadedfile in listoffiles[1:]:
+            filename = downloadedfile["name"]
+            savefilename = downloadedfile["name"].split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".json"
+            try:
+                with open(f"reports/{savefilename}", "wb+") as f:
+                        response = (
+                            conn.storage
+                            .from_("legorover")
+                            .download(f"reports/{filename}")
+                        )
+                        f.write(response)
+                csv_op_file_name = downloadedfile["name"].split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".csv"
+                json_to_csv(json_input_path=f"reports/{savefilename}", csv_output_path="reports/" + csv_op_file_name)
+            except:
+                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                print("Poblem downloading new files()")
+                print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+
 
 if __name__ == "__main__":
 
@@ -109,5 +156,6 @@ if __name__ == "__main__":
         st.session_state["conn"] = None
     conn = init_connection()
     st.session_state["conn"] = conn
+    run_on_new_session()
     main()
 

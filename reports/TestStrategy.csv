@@ -18,12 +18,12 @@ Rover_TestStrategy,t3,t3_4,lego_Rover,TP6,MtLemmon_Researcher,,MtLemmon_TestFaci
 Rover_TestStrategy,t3,t3_4,lego_Rover,TP6,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,,MtLemmonTF_Multimeter
 Rover_TestStrategy,t3,t3_4,lego_Rover,TP6,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,,MtLemmonTF_Fridge
 Rover_TestStrategy,t3,t3_4,lego_Rover,TP6,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,,MtLemmonTF_MemoryStick
-Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_Stopwatch
-Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_Treadmill
-Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_BatteryCharger
-Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_Multimeter
-Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_Fridge
-Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,MtLemmon_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_MemoryStick
+Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,Yuma_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_Stopwatch
+Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,Yuma_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_Treadmill
+Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,Yuma_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_BatteryCharger
+Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,Yuma_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_Multimeter
+Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,Yuma_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_Fridge
+Rover_TestStrategy,t3,t3_3,lego_Rover,TP5,Yuma_Researcher,,MtLemmon_TestFacility,,7.5,day,t3_4,MtLemmonTF_MemoryStick
 Rover_TestStrategy,t1,t1_3,lego_Rover,TP1,MtLemmon_Researcher,,MtLemmon_TestFacility,,0.5,day,t1_4,MtLemmonTF_Thermometer
 Rover_TestStrategy,t1,t1_3,lego_Rover,TP1,MtLemmon_Researcher,,MtLemmon_TestFacility,,0.5,day,t1_4,MtLemmonTF_Stopwatch
 Rover_TestStrategy,t1,t1_3,lego_Rover,TP1,MtLemmon_Researcher,,MtLemmon_TestFacility,,0.5,day,t1_4,MtLemmonTF_Treadmill
@@ -66,5 +66,5 @@ Rover_TestStrategy,t2,t2_1,lego_Rover,TP3,Yuma_Researcher,,Yuma_TestFacility,,0.
 Rover_TestStrategy,t2,t2_1,lego_Rover,TP3,Yuma_Researcher,,Yuma_TestFacility,,0.5,day,t2_2,YumaTF_Thermometer
 Rover_TestStrategy,t2,t2_1,lego_Rover,TP3,Yuma_Researcher,,Yuma_TestFacility,,0.5,day,t2_2,YumaTF_Multimeter
 Rover_TestStrategy,t2,t2_1,lego_Rover,TP3,Yuma_Researcher,,Yuma_TestFacility,,0.5,day,t2_2,YumaTF_MemoryStick
-Rover_TestStrategy,t2,t2_1,lego_Rover,TP3,Yuma_Researcher,,Yuma_TestFacility,,0.5,day,t2_2,YumaTF_Stopwatch
+Rover_TestStrategy,t2,t2_1,lego_Rover,TP3,Yuma_Researcher,,Yuma_TestFacility,,0.5,day,t2_2,MtLemmonTF_Stopwatch
 Rover_TestStrategy,t2,t2_1,lego_Rover,TP3,Yuma_Researcher,,Yuma_TestFacility,,0.5,day,t2_2,YumaTF_Treadmill
