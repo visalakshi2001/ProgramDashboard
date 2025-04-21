@@ -2,6 +2,8 @@ import json
 import csv
 import os
 
+import pandas as pd
+
 def json_to_csv(csv_output_path, json_input_path="", json_file_object=None):
     """
     Converts a JSON file (with 'head'->'vars' and 'results'->'bindings') to a CSV file.
@@ -51,11 +53,38 @@ def json_to_csv(csv_output_path, json_input_path="", json_file_object=None):
 
             writer.writerow(row_data)
 
+def validate_csv(file_path, expected_columns, skip_non_null_check=False):
+    try:
+        df = pd.read_csv(file_path)
+
+        # Check if all expected columns are present
+        if not set(expected_columns).issubset(df.columns):
+            print(f"{file_path} has Missing required columns.")
+            return False
+
+        if not skip_non_null_check:
+            # Drop rows with any null values
+            non_null_rows = df.dropna()
+
+            # Also check for empty strings (optional, if required)
+            non_null_rows = non_null_rows[~(non_null_rows == '').any(axis=1)]
+
+            # Check if any rows remain
+            if len(non_null_rows) == 0:
+                print("No complete non-null rows found.")
+                return False
+
+        return True
+
+    except Exception as e:
+        print(f"Error reading CSV: {e}")
+        return False
+
 # if __name__ == "__main__":
-    # json_to_csv(json_input_path="reports/MissionArchitecture.json", csv_output_path="reports/MissionArchitecture.csv")
-    # json_to_csv(json_input_path="reports/Requirements.json", csv_output_path="reports/Requirements.csv")
-    # json_to_csv(json_input_path="reports/SystemArchitecture.json", csv_output_path="reports/SystemArchitecture.csv")
-    # json_to_csv(json_input_path="reports/TestFacilities.json", csv_output_path="reports/TestFacilities.csv")
-    # json_to_csv(json_input_path="reports/TestResults.json", csv_output_path="reports/TestResults.csv")
-    # json_to_csv(json_input_path="reports/TestStrategy.json", csv_output_path="reports/TestStrategy.csv")
-    # json_to_csv(json_input_path="reports/TripleCount.json", csv_output_path="reports/TripleCount.csv")
+#     json_to_csv(json_input_path="reports students/MissionArchitecture.json", csv_output_path="reports students/MissionArchitecture.csv")
+#     json_to_csv(json_input_path="reports students/Requirements.json", csv_output_path="reports students/Requirements.csv")
+#     json_to_csv(json_input_path="reports students/SystemArchitecture.json", csv_output_path="reports students/SystemArchitecture.csv")
+#     json_to_csv(json_input_path="reports students/TestFacilities.json", csv_output_path="reports students/TestFacilities.csv")
+#     json_to_csv(json_input_path="reports students/TestResults.json", csv_output_path="reports students/TestResults.csv")
+#     json_to_csv(json_input_path="reports students/TestStrategy.json", csv_output_path="reports students/TestStrategy.csv")
+#     json_to_csv(json_input_path="reports students/TripleCount.json", csv_output_path="reports students/TripleCount.csv")

@@ -9,6 +9,53 @@ import os
 
 
 from issueswarnings import issuesinfo
+from jsontocsv import json_to_csv, validate_csv
+
+def teststratvalidate():
+    expected_cols_strat = [ "TestStrategy" , "Test" , "TestCase" , "TestSubject" , "TestProcedure" , "Researcher" , "ResearcherOrg" , "Facility" , "Org" , "DurationValue" , "DurationUnit" , "OccursBefore" , "TestEquipment" ]
+    expected_cols_facility = [ "TestFacility" , "TestFacilityTemp" , "TestFacilityTempMeas" , "TestFacilityTempValue" , "TestFacilityTempUnit" , "Equipment" ]
+    
+    is_valid_strat = validate_csv("reports/TestStrategy.csv", expected_cols_strat, skip_non_null_check=True)
+    is_valid_facility = validate_csv("reports/TestFacilities.csv", expected_cols_facility)
+    
+    if not is_valid_strat:
+        st.toast("TestStrategy.csv is not uploaded correctly", icon="🚨")
+        savefilename = filename = "TestStrategy.json"
+        try:
+            conn = st.session_state["conn"]
+            with open(f"reports/{savefilename}", "wb+") as f:
+                    response = (
+                        conn.storage
+                        .from_("legorover")
+                        .download(f"reports_full/{filename}")
+                    )
+                    f.write(response)
+            csv_op_file_name = filename.split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".csv"
+            json_to_csv(json_input_path=f"reports/{savefilename}", csv_output_path="reports/" + csv_op_file_name)
+        except:
+            print(f"{filename} is either missing or corrupted upload it to cloud and restart the app")
+    
+    if not is_valid_facility:
+        st.toast("TestFacilities.csv is not uploaded correctly", icon="🚨")
+        savefilename = filename = "TestFacilities.json"
+        try:
+            conn = st.session_state["conn"]
+            with open(f"reports/{savefilename}", "wb+") as f:
+                    response = (
+                        conn.storage
+                        .from_("legorover")
+                        .download(f"reports_full/{filename}")
+                    )
+                    f.write(response)
+            csv_op_file_name = filename.split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".csv"
+            json_to_csv(json_input_path=f"reports/{savefilename}", csv_output_path="reports/" + csv_op_file_name)
+        except:
+            print(f"{filename} is either missing or corrupted upload it to cloud and restart the app")
+    
+    if not (is_valid_facility or is_valid_strat):
+        st.write("Use the edit data button to upload valid TestStrategy.json and TestFacility.json files")
+    else:
+        teststrat()
 
 def teststrat():
     
@@ -138,7 +185,10 @@ def teststrat():
 
 
     with cols[1]:
-        issuesinfo(curr_tab="test_strategy")
+        try:
+            issuesinfo(curr_tab="test_strategy")
+        except:
+            st.write("There is an internal error in displaying the test warnings")
     
     cols[0].write("---")
     # viewopts = ["Structure", "Table", "Sequence Timeline"]

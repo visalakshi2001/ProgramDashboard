@@ -4,6 +4,55 @@ import pandas as pd
 # for making UML diagrams
 import graphviz
 
+from jsontocsv import validate_csv, json_to_csv
+
+# def sysarcvaliate():
+
+#     expected_cols_sys = [ "SOI" , "Subsystem" , "Component" ]
+#     expected_cols_miss = [ "Mission" , "Env" , "MissionEntities" ]
+#     is_valid_sys = validate_csv("reports/TestResults.csv", expected_cols_sys, skip_non_null_check=True)
+#     is_valid_miss = validate_csv("reports/TestResults.csv", expected_cols_miss, skip_non_null_check=True)
+
+#     st.write(is_valid_sys, is_valid_miss)
+
+#     if not is_valid_sys:
+#         st.toast("SystemArchitecture.csv is not uploaded correctly", icon="🚨")
+#         savefilename = filename = "SystemArchitecture.json"
+#         try:
+#             conn = st.session_state["conn"]
+#             with open(f"reports/{savefilename}", "wb+") as f:
+#                     response = (
+#                         conn.storage
+#                         .from_("legorover")
+#                         .download(f"reports_full/{filename}")
+#                     )
+#                     f.write(response)
+#             csv_op_file_name = filename.split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".csv"
+#             json_to_csv(json_input_path=f"reports/{savefilename}", csv_output_path="reports/" + csv_op_file_name)
+#         except:
+#             print(f"{filename} is either missing or corrupted upload it to cloud and restart the app")
+    
+#     if not is_valid_miss:
+#         st.toast("MissionArchitecture.csv is not uploaded correctly", icon="🚨")
+#         savefilename = filename = "MissionArchitecture.json"
+#         try:
+#             conn = st.session_state["conn"]
+#             with open(f"reports/{savefilename}", "wb+") as f:
+#                     response = (
+#                         conn.storage
+#                         .from_("legorover")
+#                         .download(f"reports_full/{filename}")
+#                     )
+#                     f.write(response)
+#             csv_op_file_name = filename.split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".csv"
+#             json_to_csv(json_input_path=f"reports/{savefilename}", csv_output_path="reports/" + csv_op_file_name)
+#         except:
+#             print(f"{filename} is either missing or corrupted upload it to cloud and restart the app")
+    
+#     if not (is_valid_miss or is_valid_sys):
+#         st.toast("Please populate the System or Mission Architecture with correct data and re-upload")
+#     else:
+#         sysarcfunc()
 
 # ########## ARCHITECTURE VIEW FUNCTION
 def sysarcfunc():

@@ -3,6 +3,29 @@ import pandas as pd
 import re
 
 from issueswarnings import issuesinfo
+from jsontocsv import json_to_csv, validate_csv
+
+def dashreqsvalidate():
+    expected_cols = [ "ReqID" , "ReqName" , "ReqDescription" , "ReqSubject" , "SatisfiedBy" , "VerifiedBy" ]
+    is_valid = validate_csv("reports/Requirements.csv", expected_cols)
+    if not is_valid:
+        st.toast("Requirements.csv is not uploaded correctly", icon="🚨")
+        savefilename = filename = "Requirements.json"
+        try:
+            conn = st.session_state["conn"]
+            with open(f"reports/{savefilename}", "wb+") as f:
+                    response = (
+                        conn.storage
+                        .from_("legorover")
+                        .download(f"reports_full/{filename}")
+                    )
+                    f.write(response)
+            csv_op_file_name = filename.split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".csv"
+            json_to_csv(json_input_path=f"reports/{savefilename}", csv_output_path="reports/" + csv_op_file_name)
+        except:
+            print(f"{filename} is either missing or corrupted upload it to cloud and restart the app")
+    else:
+        dashreqs()
 
 # ########## REQUIREMENTS VIEW FUNCTION
 def dashreqs():
@@ -26,7 +49,9 @@ def dashreqs():
         st.dataframe(breakdown, hide_index=True, use_container_width=True)
     
     with cols[1]:
-        issuesinfo(curr_tab="requirements")
-    
+        try:
+            issuesinfo(curr_tab="requirements")
+        except:
+            st.write("There is an internal error in displaying the test warnings")
 
    
