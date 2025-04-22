@@ -72,7 +72,7 @@ def replace_data(TABS):
 
 
     required_files = [tie + ".json" for tab in selected_tabs for tie in data_ties[tab]]
-    new_files = st.file_uploader(accept_multiple_files=True, label="Upload CSV Files listed below")
+    new_files = st.file_uploader(accept_multiple_files=True, label="Upload CSV Files listed below", type="json")
 
     uploaded_file_names = [f.name.split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".json"
                             for f in new_files]
@@ -103,10 +103,10 @@ def replace_data(TABS):
     # THIS IS NEW WORKAROUND THAT TESTS AND IMPLEMENTS LOCAL DATA UPDATES
     for f in new_files:
         file_contents = f.read()
-        st.success(f"✅ {f.name} uploaded successfully!")
+        # st.success(f"✅ {f.name} uploaded successfully!")
         csv_op_file_name = f.name.split(".json")[0].strip().translate({ord(ch): None for ch in '0123456789'}).strip() + ".csv"
         json_to_csv(json_file_object=file_contents, csv_output_path="reports/" + csv_op_file_name)
-        st.success(f"✅ {csv_op_file_name} saved to repository")
+        st.success(f"✅ {f.name} saved to repository")
 
 
     if selected_tabs!= [] and all_files_uploaded:

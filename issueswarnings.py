@@ -75,8 +75,22 @@ def create_issues():
     test_case_durations = strategy.groupby("Test Case")["Duration Value"].max()
     total_test_case_duration = test_case_durations.sum()
 
-    sorted_tests = strategy["Test Case"].tolist()
-    facilities = strategy["Facility"].tolist()
+    strategysubset = strategy[["Test Case", "Occurs Before", "Facility"]].drop_duplicates()
+    testlink = strategysubset.dropna(subset=["Occurs Before"]).set_index("Test Case")["Occurs Before"].to_dict()
+    # ── Produce the mapping facility list (not the correct order right now) ─────
+    facilitylink = strategysubset.set_index('Test Case')['Facility'].to_dict()
+
+    sorted_tests = []
+    # ── Find the head of the chain (it never appears in OccursBefore) ───────────
+    current_test = start = (set(testlink.keys()) - set(testlink.values())).pop()
+    while True:
+        sorted_tests.append(current_test)
+        next_test = testlink.get(current_test)
+        if not next_test:
+            break
+        current_test = next_test
+    
+    facilities = [facilitylink[testcase] for testcase in sorted_tests]
     
     previous_facility = None
     settests = set()

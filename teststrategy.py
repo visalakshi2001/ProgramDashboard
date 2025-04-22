@@ -84,8 +84,22 @@ def teststrat():
     test_case_durations = strategy.groupby("Test Case")["Duration Value"].max()
     total_test_case_duration = test_case_durations.sum()
 
-    sorted_tests = strategy["Test Case"].tolist()
-    facilities = strategy["Facility"].tolist()
+    strategysubset = strategy[["Test Case", "Occurs Before", "Facility"]].drop_duplicates()
+    testlink = strategysubset.dropna(subset=["Occurs Before"]).set_index("Test Case")["Occurs Before"].to_dict()
+    # ── Produce the mapping facility list (not the correct order right now) ─────
+    facilitylink = strategysubset.set_index('Test Case')['Facility'].to_dict()
+
+    sorted_tests = []
+    # ── Find the head of the chain (it never appears in OccursBefore) ───────────
+    current_test = start = (set(testlink.keys()) - set(testlink.values())).pop()
+    while True:
+        sorted_tests.append(current_test)
+        next_test = testlink.get(current_test)
+        if not next_test:
+            break
+        current_test = next_test
+    
+    facilities = [facilitylink[testcase] for testcase in sorted_tests]
     
     previous_facility = None
     settests = set()
@@ -282,21 +296,23 @@ def make_sequence_view(strategy, test_case_durations, testDuration):
     # start_date = pd.to_datetime("2025-01-01")
     current_start = pd.to_datetime("2025-01-01")
 
-    # We'll sort the tests by the order of occurs before
-    sorted_tests = strategy["Test Case"].tolist()
-    # st.write(sorted_tests)
-    # 1.1, 1.2, 2.1, 2.2, 1.3, 1.4, 2.3, 2.4, 3.1, 3.2, 3.3, 3.4
-    # sorted_tests = ["t1_1"]*6 + ["t1_2"]*6 + ["t2_1"]*6 + ["t2_2"]*6 + ["t1_3"]*6 + ["t1_4"]*6 + \
-    #              ["t2_3"]*6 + ["t2_4"]*6 + ["t3_1"]*6 + ["t3_2"]*6 + ["t3_3"]*6 + ["t3_4"]*6
+    # ── Build a mapping  TestCase  →  OccursBefore ──────────────────────────────
+    strategysubset = strategy[["Test Case", "Occurs Before", "Facility"]].drop_duplicates()
+    testlink = strategysubset.dropna(subset=["Occurs Before"]).set_index("Test Case")["Occurs Before"].to_dict()
+    # ── Produce the mapping facility list (not the correct order right now) ─────
+    facilitylink = strategysubset.set_index('Test Case')['Facility'].to_dict()
 
-    facilities = strategy["Facility"].tolist()
-
-    # test_order_df = pd.DataFrame({"Test Case": sorted_tests})
-    # facility_order_df = pd.merge(strategy, test_order_df, right_on="Test Case", left_on="Test Case", how="outer")
-
-    # facilities = facility_order_df["Facility"].tolist()
-    # sorted_tests = facility_order_df["Test Case"].to_list()
-    # st.write(facility_order_df)
+    sorted_tests = []
+    # ── Find the head of the chain (it never appears in OccursBefore) ───────────
+    current_test = start = (set(testlink.keys()) - set(testlink.values())).pop()
+    while True:
+        sorted_tests.append(current_test)
+        next_test = testlink.get(current_test)
+        if not next_test:
+            break
+        current_test = next_test
+    
+    facilities = [facilitylink[testcase] for testcase in sorted_tests]
 
     previous_facility = None
     settests = set()
