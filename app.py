@@ -46,10 +46,8 @@ def main():
         else:
             st.write("Use the Edit Data button to upload TestResults.json file")
     with tabs[6]:
-        try:
-            issues_view()
-        except:
-            st.info("There is an internal error in displaying this information")
+        issues_view()
+        # st.info("There is an internal error in displaying this information")
 
 @st.cache_resource
 def init_connection():

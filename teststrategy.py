@@ -17,7 +17,7 @@ def teststratvalidate():
     
     is_valid_strat = validate_csv("reports/TestStrategy.csv", expected_cols_strat, skip_non_null_check=True)
     is_valid_facility = validate_csv("reports/TestFacilities.csv", expected_cols_facility)
-    
+
     if not is_valid_strat:
         st.toast("TestStrategy.csv is not uploaded correctly", icon="🚨")
         savefilename = filename = "TestStrategy.json"
@@ -185,6 +185,7 @@ def teststrat():
 
 
     with cols[1]:
+        st.markdown("<h4>Warnings/Issues</h4>", True)
         try:
             issuesinfo(curr_tab="test_strategy")
         except:

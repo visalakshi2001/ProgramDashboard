@@ -4,15 +4,17 @@ import re
 import os
 
 def issues_view():
-    issuesinfo()
+    # cont = st.container(border=True)
+    st.markdown("<h4>Warnings/Issues</h4>", True)
+    issuesinfo("test_strategy")
+    issuesinfo("test_results")
+    issuesinfo("requirements")
 
 def issuesinfo(curr_tab=""):
 
     cont = st.container(border=True)
 
-    cont.markdown("<h4>Warnings/Issues</h4>", True)
-
-
+    
     issues_dict = create_issues()
 
     if curr_tab == "test_strategy":
@@ -48,6 +50,7 @@ def issuesinfo(curr_tab=""):
                 cont.warning(issue["message"], icon="⚠️")
             if issue["type"] == "error":
                 cont.error(issue["message"], icon="❗")
+        
 
 
 def create_issues():
@@ -191,10 +194,15 @@ def create_issues():
         temp_df = facility_temp_df[facility_temp_df["Test Facility"] == fac]
 
 
-        mintemp = temp_df[temp_df["Test Facility Temp"] == "Min_Temp"].iloc[0]["Test Facility Temp Value"]
-        maxtemp = temp_df[temp_df["Test Facility Temp"] == "Max_Temp"].iloc[0]["Test Facility Temp Value"]
-        actualtemp = temp_df[temp_df["Test Facility Temp"] == "Actual_Temp"].iloc[0]["Test Facility Temp Value"]
+        mintemp = temp_df[temp_df["Test Facility Temp"] == "Min_Temp"]
+        mintemp = mintemp.iloc[0]["Test Facility Temp Value"] if len(mintemp) > 0 else None
 
+        maxtemp = temp_df[temp_df["Test Facility Temp"] == "Max_Temp"]
+        maxtemp = maxtemp.iloc[0]["Test Facility Temp Value"] if len(maxtemp) > 0 else None
+
+        actualtemp = temp_df[temp_df["Test Facility Temp"] == "Actual_Temp"]
+        actualtemp = actualtemp.iloc[0]["Test Facility Temp Value"] if len(actualtemp) > 0 else None
+        
         test_facility_temp_availability[fac] = {"mintemp": mintemp, "maxtemp": maxtemp, "actualtemp": actualtemp}
     
     for testcase in test_case_temp_requirement.keys():
@@ -211,12 +219,20 @@ def create_issues():
                 issues_dict["requirements"].append({'type': "error",
                                                 'message': f"The Test Case {testcase} requires low-temp of at most {min_req_temp}degF but it takes place at Facility {testcasefacility} which does not meet the temperature requirements"}
                 )
+        # else:
+        #     issues_dict["requirements"].append({'type': "warning",
+        #                                         'message': f"Could not extract Minimum Facility Temperature value for {fac}. Value missing or incorrectly represented"}
+        #         )
         
         if max_req_temp is not None:
             if not (facility_min_temp <= max_req_temp and max_req_temp <= facility_max_temp):
                 issues_dict["requirements"].append({'type': "error",
                                                 'message': f"The Test Case {testcase} requires high-temp of at least {max_req_temp}degF but it takes place at Facility {testcasefacility} which does not meet the temperature requirements"}
                 )
+        # else:
+        #     issues_dict["requirements"].append({'type': "warning",
+        #                                         'message': f"Could not extract Maximum Facility Temperature value for {fac}. Value missing or incorrectly represented"}
+        #         )
     
     # create issues for requirements tab
     if os.path.exists("reports/TestResults.csv"):
@@ -250,9 +266,11 @@ def create_issues():
                     issues_dict["requirements"].append({'type': "error",
                                                     'message': f"The Test Case {testcase} with actual temperature value {actualtemp}degF takes place at Facility {testcasefacility} which does not meet the temperature requirements"}
                     )
+            else:
+                issues_dict["requirements"].append({'type': "warning",
+                                                    'message': f"Could not extract Actual Temperature value for {testcase}. Value missing or incorrectly represented"}
+                    )
 
-        
-    
     issues_dict["test_strategy"] = pd.DataFrame(issues_dict["test_strategy"]).drop_duplicates().to_dict('records')
     issues_dict["requirements"] = pd.DataFrame(issues_dict["requirements"]).drop_duplicates().to_dict('records')
     issues_dict["test_results"] = pd.DataFrame(issues_dict["test_results"]).drop_duplicates().to_dict('records')

@@ -49,6 +49,7 @@ def dashreqs():
         st.dataframe(breakdown, hide_index=True, use_container_width=True)
     
     with cols[1]:
+        st.markdown("<h4>Warnings/Issues</h4>", True)
         try:
             issuesinfo(curr_tab="requirements")
         except:
